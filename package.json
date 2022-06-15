@@ -1,0 +1,30 @@
+{
+    "name": "coschedule.com-be-",
+    "version": "1.0.0",
+    "description": "Bank-End for Co-Schedule Clone Project.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yash-2507/CoSchedule.com-BE-.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yash-2507/CoSchedule.com-BE-/issues"
+    },
+    "homepage": "https://github.com/yash-2507/CoSchedule.com-BE-#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    },
+    "dependencies": {
+        "axios": "^0.27.2",
+        "express": "^4.18.1",
+        "mongoose": "^6.3.8",
+        "uuid": "^8.3.2"
+    }
+}
