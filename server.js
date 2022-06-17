@@ -2,18 +2,20 @@ const express = require("express");
 const { default: mongoose } = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 8080;
-const { connectDB, signUpUserSchema, User } = require("./config/dbConn");
+const { connectDB, User } = require("./config/dbConn");
 const cors = require("cors");
+require("dotenv").config();
 
 connectDB();
 
-const whitelist = ["http://localhost:3000"];
+const whitelist = ["http://localhost:8080"];
 const corsOptions = {
     origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1) {
+        // console.log(origin);
+        if (whitelist.indexOf(origin) !== -1 || origin === undefined) {
             callback(null, true);
         } else {
-            callback(new Error("Not allowed by CROS"));
+            callback(new Error("Not allowed by CORS"));
         }
     },
     optionSuccessStatus: 200,

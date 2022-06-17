@@ -1,12 +1,10 @@
 const mongoose = require("mongoose");
 const { Schema, model } = require("mongoose");
+require("dotenv").config();
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb://127.0.0.1:27017/authDB", {
-            useUnifiedTopology: true,
-            useNewUrlParser: true,
-        });
+        await mongoose.connect(process.env.URI);
     } catch (error) {
         console.error(error);
     }
