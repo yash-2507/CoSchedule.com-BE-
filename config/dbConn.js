@@ -20,5 +20,20 @@ const signUpUserSchema = new Schema({
         min: 8,
     },
 });
+
+const todoSchema = new Schema({
+    date: Date,
+    title: String,
+    todos: [
+        {
+            todo: String,
+            status: Boolean,
+        },
+    ],
+    completed: Number,
+});
+
+const Todo = model("todo", todoSchema);
 const User = model("user", signUpUserSchema);
-module.exports = { connectDB, signUpUserSchema, User };
+
+module.exports = { connectDB, signUpUserSchema, todoSchema, User, Todo };
