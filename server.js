@@ -8,7 +8,7 @@ require("dotenv").config();
 
 connectDB();
 
-const whitelist = ["http://localhost:3000"];
+const whitelist = ["https://wonderful-taffy-9803c5.netlify.app"];
 const corsOptions = {
     origin: (origin, callback) => {
         if (whitelist.indexOf(origin) !== -1 || origin === undefined) {
