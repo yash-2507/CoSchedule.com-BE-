@@ -71,12 +71,11 @@ app.post("/signup", async (req, res) => {
 //Adding new todo
 app.post("/todo", async (req, res) => {
     try {
-        const { date, title, todos, completed } = req.body;
+        const { date, title, todos } = req.body;
         const newTodo = await Todo.create({
             date,
             title,
             todos,
-            completed,
         });
         newTodo.save();
         res.status(200).json({ message: "Todo Added" });

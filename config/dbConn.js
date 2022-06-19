@@ -30,7 +30,6 @@ const todoSchema = new Schema({
             status: Boolean,
         },
     ],
-    completed: Number,
 });
 
 const Todo = model("todo", todoSchema);
