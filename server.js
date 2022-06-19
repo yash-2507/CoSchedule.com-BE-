@@ -8,7 +8,7 @@ require("dotenv").config();
 
 connectDB();
 
-const whitelist = ["http://localhost:8080"];
+const whitelist = ["http://localhost:3000"];
 const corsOptions = {
     origin: (origin, callback) => {
         if (whitelist.indexOf(origin) !== -1 || origin === undefined) {
